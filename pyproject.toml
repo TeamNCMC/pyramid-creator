@@ -1,12 +1,12 @@
 [project]
 name = "pyramid-creator"
-version = "2024.12.18"
+version = "2024.12.18.1"
 authors = [{ name = "Guillaume Le Goc", email = "g.legoc@posteo.org" }]
 description = "Create pyramidal OME-TIFF from regular OME-TIFF images using QuPath or Python backend."
 readme = "README.md"
 requires-python = ">=3.12"
 
-license = { text = "GPLv3" }
+license = { text = "MIT" }
 
 classifiers = ["Programming Language :: Python :: 3.12"]
 
