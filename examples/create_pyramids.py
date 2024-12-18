@@ -7,7 +7,7 @@ import multiprocessing
 
 from pyramid_creator import pyramidalize_directory
 
-images_dir = r"E:\projects\histo\data\GN105\ZEN_EXPORT\SUB"
+images_dir = "/path/to/your/images"
 
 # --- Parameters
 # Tile size (usually 512 or 1024)

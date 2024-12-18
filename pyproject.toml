@@ -1,6 +1,6 @@
 [project]
 name = "pyramid-creator"
-version = "2024.12.17"
+version = "2024.12.18"
 authors = [{ name = "Guillaume Le Goc", email = "g.legoc@posteo.org" }]
 description = "Create pyramidal OME-TIFF from regular OME-TIFF images using QuPath or Python backend."
 readme = "README.md"
@@ -19,7 +19,7 @@ dependencies = [
 python_backend = [
   "numpy>=2",
   "scikit-image>0.22.0",
-  "tifffile>=2024.4.24"
+  "tifffile[codecs]>=2024.4.24",
 ]
 
 [project.urls]

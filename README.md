@@ -16,9 +16,9 @@ To enable the Python backend, ask for the required dependencies instead :
 pip install pyramid-creator[python_backend]
 ```
 
-To use the QuPath backend (recommended), a working QuPath installation is required, and the `pyramid-creator` command needs to be aware of its location.
+To use the QuPath backend, a working QuPath installation is required, and the `pyramid-creator` command needs to be aware of its location.
 
-To do so, first, install [QuPath](https://qupath.github.io). By default, it will install in AppData\QuPath-0.X.Y. In any case, note down the installation location.
+To do so, first, install [QuPath](https://qupath.github.io). By default, it will install in `~\AppData\QuPath-0.X.Y`. In any case, note down the installation location.
 
 Then, you have several options :
 - Create a file in your user directory called "QUPATH_PATH" (without extension), containing the full path to the QuPath console executable. In my case, it reads : `C:\Users\glegoc\AppData\Local\QuPath-0.5.1\QuPath-0.5.1 (console).exe`. Then, the `pyramid-creator` script will read this file to find the QuPath executable.

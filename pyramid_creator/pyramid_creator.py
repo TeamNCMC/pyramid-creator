@@ -17,7 +17,7 @@ import typer
 from tqdm import tqdm
 from typing_extensions import Annotated
 
-__version__ = "2024.12.17"
+__version__ = "2024.12.18"
 
 
 # --- Typer functions
