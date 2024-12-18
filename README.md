@@ -1,5 +1,8 @@
 # pyramid_creator
 
+[![Python Version](https://img.shields.io/pypi/pyversions/pyramid-creator.svg)](https://pypi.org/project/pyramid-creator)
+[![PyPI](https://img.shields.io/pypi/v/pyramid-creator.svg)](https://pypi.org/project/pyramid-creator/)
+
 This script is used to convert regular OME-TIFF files (exported from Zeiss ZEN for example) into pyramidal OME-TIFF ready to use in QuPath (see more information [here](https://teamncmc.github.io/histoquant/guide-create-pyramids.html)).
 
 It uses either QuPath in console mode (eg. without graphical user interface), calling the bundled `createPyramids.groovy` script on each images found in the input directory, or using `tifffile` in Python.
