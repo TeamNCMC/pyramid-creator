@@ -43,27 +43,20 @@ def get_script_path(script_path: str | None = None) -> str:
         check_file_path(script_path)
         return script_path
 
-    with resources.path("pyramid_creator.scripts", "createPyramids.groovy") as script_path:
+    with resources.path(
+        "pyramid_creator.scripts", "createPyramids.groovy"
+    ) as script_path:
         return str(script_path)
 
 
 def find_qupath_path() -> str:
     """
-    Set and save QuPath exe path.
-
-    If provided, it will be saved in the user home directory in a file named
-    "QUPATH_PATH". Otherwise, it will try to find in the AppData directory (Windows
-    only).
-
-    Parameters
-    ----------
-    qupath_path : str or None, optional
-        Full path to the QuPath console executable.
+    Try to find QuPath console executable in Windows AppData.
 
     Returns
     -------
     qupath_path : str
-        Full path to the QuPath console executable.
+        Full path to the QuPath console executable if found.
 
     """
     # attempt to find it -- will work only in Windows as it looks for it in
@@ -85,7 +78,16 @@ def find_qupath_path() -> str:
 
 def save_qupath_path(qupath_path: str):
     """
-    Save QuPath exe path in a configuration file in user home directory.
+    Save QuPath exe path in a configuration file called "QUPATH_PATH" in user home
+    directory.
+
+    If the file exists, it will not be modified.
+
+    Parameters
+    ----------
+    qupath_path : str
+        Path to save in the file.
+
     """
     home_dir = os.path.expanduser("~")
     config_file = os.path.join(home_dir, "QUPATH_PATH")
@@ -96,7 +98,7 @@ def save_qupath_path(qupath_path: str):
         warnings.warn(f"{config_file} already exists, it will not be modified.")
 
 
-def get_qupath_path(qupath_path: str | None = None):
+def get_qupath_path(qupath_path: str | None = None) -> str:
     """
     Get QuPath executable.
 
@@ -104,6 +106,18 @@ def get_qupath_path(qupath_path: str | None = None):
     Otherwise try to read the QuPath executable path in the QUPATH_PATH file in home
     directory.
     If it is still not found, try to find automatically.
+
+    Parameters
+    ----------
+    qupath_path : str or None, optional
+        Full path to QuPath console executable, or None to try to find it from a file
+        or automatically. Default is None.
+
+    Returns
+    -------
+    qupath_path : str
+        Full path to QuPath console executable, if found.
+
     """
     if qupath_path:
         # provided, check if it exists and return
