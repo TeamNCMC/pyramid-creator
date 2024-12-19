@@ -10,6 +10,16 @@ It uses either QuPath in console mode (eg. without graphical user interface), ca
 Specify the path to a directory with .ome.tiff files, then the script will create a "pyramidal" subfolder with your pyramidalized images in it.
 
 ## Install
+
+### Install `conda`
+If not installed already, install [Miniforge](https://conda-forge.org/download/), as user, add to PATH and make it the default interpreter. For more information, you can check [this page](https://teamncmc.github.io/histoquant/main-getting-started.html#python-virtual-environment-manager-conda). Open a terminal, run `conda init` and restart the terminal.
+
+Create a virtual environment (that can be the same than the one for [`histoquant`](https://github.com/TeamNCMC/histoquant) if you plan to use that later on) :
+```bash
+conda create -n hq python=3.12
+```
+
+### Install `pyramid-creator`
 Within a virtual environment with Python 3.12, install with `pip` from the terminal :
 ```bash
 pip install pyramid-creator
