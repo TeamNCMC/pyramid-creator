@@ -3,7 +3,7 @@
 [![Python Version](https://img.shields.io/pypi/pyversions/pyramid-creator.svg)](https://pypi.org/project/pyramid-creator)
 [![PyPI](https://img.shields.io/pypi/v/pyramid-creator.svg)](https://pypi.org/project/pyramid-creator/)
 
-This script is used to convert regular OME-TIFF files (exported from Zeiss ZEN for example) into pyramidal OME-TIFF ready to use in QuPath (see more information [here](https://teamncmc.github.io/histoquant/guide-create-pyramids.html)).
+This script is used to convert regular OME-TIFF files (exported from Zeiss ZEN for example) into pyramidal OME-TIFF ready to use in QuPath (see more information [here](https://teamncmc.github.io/cuisto/guide-create-pyramids.html)).
 
 It uses either QuPath in console mode (eg. without graphical user interface), calling the bundled `createPyramids.groovy` script on each images found in the input directory, or using `tifffile` in Python.
 
@@ -14,9 +14,9 @@ Specify the path to a directory with .ome.tiff files, then the script will creat
 ### Install `conda`
 If not installed already, install [Miniforge](https://conda-forge.org/download/), as user, add to PATH and make it the default interpreter. For more information, you can check [this page](https://teamncmc.github.io/histoquant/main-getting-started.html#python-virtual-environment-manager-conda). Open a terminal, run `conda init` and restart the terminal.
 
-Create a virtual environment (that can be the same than the one for [`histoquant`](https://github.com/TeamNCMC/histoquant) if you plan to use that later on) :
+Create a virtual environment (that can be the same than the one for [`cuisto`](https://github.com/TeamNCMC/cuisto) if you plan to use that later on) :
 ```bash
-conda create -n hq python=3.12
+conda create -n cuisto-env python=3.12
 ```
 
 ### Install `pyramid-creator`
