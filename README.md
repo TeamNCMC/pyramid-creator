@@ -52,20 +52,20 @@ From a terminal within the virtual environment in which you installed `videocutt
 ```bash
 pyramid-creator --help
 ```
-Then, use it like so :
-1. Pyramidalize all .ome.tiff files found in a directory, using default values (therefore using QuPath backend)
+Then, here are some examples of usage :
+- Pyramidalize all .ome.tiff files found in a directory, using default values (therefore using QuPath backend)
 ```bash
 pyramid-creator /path/to/your/images
 ```
-2. Change the tile size
+- Change the tile size
 ```bash
 pyramid-creator /path/to/your/images --tile-size 1024
 ```
-3. Specify the path to a custom groovy script. The latter should take exactly the same number of arguments as `pyramid-creator/scripts/createPyramids.groovy`
+- Specify the path to a custom groovy script. The latter should take exactly the same number of arguments as `pyramid-creator/scripts/createPyramids.groovy`
 ```bash
 pyramid-creator /path/to/your/images --script-path /path/to/your/custom/script.groovy
 ```
-4. Use the Python backend instead of QuPath :
+- Use the Python backend instead of QuPath :
 ```bash
 pyramid-creator /path/to/your/images --no-use-qupath
 ```
